@@ -67,7 +67,7 @@ I also learned that one can use bun(https://bun.sh/#:~:text=Bun%20still%20instal
 ### Links
 
 - Solution URL: [Github Link](https://github.com/samoina/tic-tac-toe-ReactJS)
-- Live Site URL: [Netlify Link]()
+- Live Site URL: [Netlify Link](https://samoina-tic-tac-toe-react.netlify.app/)
 
 ## My process
 
