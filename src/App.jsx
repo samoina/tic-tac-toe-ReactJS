@@ -62,21 +62,19 @@ function App() {
 			setHeaderMsg("It is now Player O's turn");
 
 			playerPosition = ev.target.classList[0];
-			setPlayerXArr([...playerXArr, playerPosition]);
+			setPlayerXArr((prevArr) => [...prevArr, playerPosition]);
 
 			setCount((prev) => prev + 1);
-			setPlayerTurn(false);
-			checkScore();
+			setPlayerTurn(false, () => checkScore());
 		} else if (gameSquare.textContent === '' && playerTurn === false) {
 			gameSquare.textContent = 'O';
 			setHeaderMsg("It is now Player X's turn");
 
 			playerPosition = ev.target.classList[0];
-			setPlayerOArr([...playerOArr, playerPosition]);
+			setPlayerOArr((prevArr) => [...prevArr, playerPosition]);
 
 			setCount((prev) => prev + 1);
-			setPlayerTurn(true);
-			checkScore();
+			setPlayerTurn(true, () => checkScore());
 		} else if (
 			gameSquare.textContent === 'X' ||
 			gameSquare.textContent === 'O'
